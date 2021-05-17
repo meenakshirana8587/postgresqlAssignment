@@ -183,8 +183,8 @@ Values(1,20),
 
 
 
- DROP TABLE orders;
-CREATE TABLE Order
+ 
+CREATE TABLE Orders
 (
 	order_id SERIAL PRIMARY KEY,
 	
@@ -195,7 +195,7 @@ CREATE TABLE Order
 );
 
 --insert data into orders table
-INSERT INTO Order(order_item_quantity,order_date,product_id)
+INSERT INTO Orders(order_item_quantity,order_date,product_id)
 VALUES(30,'2020-12-20',1),
 (30,'2020-11-20',2),
 (30,'2020-10-20',3),
@@ -294,7 +294,7 @@ SELECT * FROM Supplier WHERE supplier_city='Rajasthan';
 SELECT pr.product_name,s.supplier_name, o.order_item_quantity, o.order_date FROM Product pr
 JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
-JOIN Order o
+JOIN Orders o
 ON o.product_id= pr.product_id
 ORDER BY o.order_date DESC LIMIT 5;--showing 5 most recent orders.
 
@@ -302,7 +302,7 @@ ORDER BY o.order_date DESC LIMIT 5;--showing 5 most recent orders.
 SELECT pr.product_name,s.supplier_name, o.order_item_quantity, o.order_date FROM Product pr
 JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
-JOIN Order o
+JOIN Orders o
 ON o.product_id= pr.product_id
 WHERE pr.product_name LIKE 'M%'
 ORDER BY o.order_date DESC ;
@@ -311,7 +311,7 @@ ORDER BY o.order_date DESC ;
 SELECT pr.product_name,s.supplier_name, o.order_item_quantity, o.order_date FROM Product pr
 JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
-JOIN Order o
+JOIN Orders o
 ON o.product_id= pr.product_id
 WHERE s.supplier_name Like 'J%'
 ORDER BY o.order_date DESC;
@@ -320,7 +320,7 @@ ORDER BY o.order_date DESC;
 SELECT pr.product_name,s.supplier_name, o.order_item_quantity, o.order_date FROM Product pr
 JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
-JOIN Order o
+JOIN Orders o
 ON o.product_id= pr.product_id
 WHERE pr.product_short_code LIKE 'a%'
 ORDER BY o.order_date DESC;
@@ -329,7 +329,7 @@ ORDER BY o.order_date DESC;
 SELECT pr.product_name,s.supplier_name, o.order_item_quantity, o.order_date FROM Product pr
 JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
-JOIN Order o
+JOIN Orders o
 ON o.product_id= pr.product_id
 WHERE pr.date_of_supply>'2021-01-01'
 ORDER BY o.order_date DESC;
@@ -340,11 +340,8 @@ JOIN Inventory inv
 ON inv.product_id= pr.product_id
 JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
-JOIN Order o
+JOIN Orders o
 ON o.product_id= pr.product_id
 WHERE inv.quantity>40
 ORDER BY o.order_date DESC;
-
-
-
 
