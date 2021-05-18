@@ -233,8 +233,9 @@ VALUES(30,'2020-12-20',1),
 (30,'2021-05-20',5);
 
 --1)Query Staff using name or phone number or both
-SELECT * FROM Staff WHERE FirstName='Ajay';
-SELECT * FROM Staff WHERE Phone='9087654321';
+SELECT * FROM Staff WHERE FirstName='Ajay'
+OR
+Phone='9087654321';
 
 --2)Query Staff using their Role
 SELECT s.FirstName, s.LastName, r.RoleName FROM Staff s
