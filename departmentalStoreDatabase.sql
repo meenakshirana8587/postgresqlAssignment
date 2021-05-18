@@ -1,53 +1,78 @@
 --create table roles
 CREATE TABLE Role
 (
-	role_id SERIAL PRIMARY KEY,
-	roles VARCHAR(30) NOT NULL
+	RoleId SERIAL PRIMARY KEY,
+	RoleName VARCHAR(30) NOT NULL,
+	RoleDescription VARCHAR(50)
+	
 );
 
+
+
 --insert data into roles table
-INSERT INTO Role(roles)
-VALUES('Cashier'),
-('Store manager'),
-('Assistant store manager'),
-('Inventory control specilist'),
-('Sales associate'),
-('Security Guard'),
-('Sweepers');
+INSERT INTO Role(RoleName, RoleDescription)
+VALUES('Cashier', 'create bill'),
+('Store manager','manage the store'),
+('Assistant store manager','help the store manager'),
+('Inventory control specilist','manage the inventory'),
+('Sales associate','manage the customers'),
+('Security Guard','the store is secure'),
+('Sweepers','the most important thing is hygiene');
 	
 
 
 --create table Staff
 CREATE TABLE Staff(
-	staff_id SERIAL PRIMARY KEY,
-	first_name VARCHAR(30) NOT NULL,
-	last_name VARCHAR(20),
-	date_of_birth Date,
-	gender CHAR(1),
-	phone VARCHAR(10),
-	city VARCHAR(20),
-	roles_id int REFERENCES Role(role_id)
+	StaffId SERIAL PRIMARY KEY,
+	FirstName VARCHAR(30) NOT NULL,
+	LastName VARCHAR(20),
+	DateOfBirth Date,
+	Gender CHAR(1),
+	Phone CHAR(10),
+	AddressId bigint REFERENCES Address(AddressId),
+	RoleId int REFERENCES Role(RoleId)
 	
 );
 
 
+
+
 --insert data into staff table
-INSERT INTO Staff(first_name, last_name, date_of_birth, gender, phone, city, roles_id)
-VALUES('Saumya','Malhotra', '1995-12-25', 'F', '1234567890', 'Delhi', '2');
+INSERT INTO Staff(FirstName, LastName, DateOfBirth, Gender, Phone, AddressId, RoleId)
+VALUES('Saumya','Malhotra', '1995-12-25', 'F', '1234567890', 1, '2');
 
-INSERT INTO Staff(first_name, last_name, date_of_birth, gender, phone, city, roles_id)
-VALUES('Rohit','Mishra', '1993-03-19', 'F', '1234567890', 'Delhi', '3'),
-('Harshit','Verma', '1997-02-19', 'M', '9087654321', 'Delhi', '1'),
-('Yanshik','Raina', '1998-03-19', 'M', '8097654321', 'Delhi', '1'),
-('Ravi','Rai', '1978-04-19', 'M', '5098764321', 'Delhi', '6'),
-('Ajay','Pal', '1997-08-15', 'M', '7098654321', 'Delhi', '4'),
-('Aarushi','Rawat', '1997-12-19', 'F', '6098754321', 'Delhi', '4'),
-('Anshita','Garg', '1995-05-17', 'F', '4098765321', 'Delhi', '5'),
-('Anjali','Rai', '1994-07-21', 'F', '3098765421', 'Delhi', '5'),
-('Rahul','Singh', '1990-05-19', 'M', '2098765431', 'Delhi', '7');
+INSERT INTO Staff(FirstName, LastName, DateOfBirth, Gender, Phone, AddressId, RoleId)
+VALUES('Rohit','Mishra', '1993-03-19', 'F', '1234567890', 2, '3'),
+('Harshit','Verma', '1997-02-19', 'M', '9087654321', 3, '1'),
+('Yanshik','Raina', '1998-03-19', 'M', '8097654321', 4, '1'),
+('Ravi','Rai', '1978-04-19', 'M', '5098764321', 5, '6'),
+('Ajay','Pal', '1997-08-15', 'M', '7098654321', 6, '4'),
+('Aarushi','Rawat', '1997-12-19', 'F', '6098754321', 7, '4'),
+('Anshita','Garg', '1995-05-17', 'F', '4098765321', 8, '5'),
+('Anjali','Rai', '1994-07-21', 'F', '3098765421', 9, '5'),
+('Rahul','Singh', '1990-05-19', 'M', '2098765431', 10, '7');
 
+--Create table address
+CREATE TABLE Address(
+	AddressId SERIAL PRIMARY KEY,
+	AddressLine1 VARCHAR(40) NOT NULL,
+	AddressLine2 VARCHAR(40),
+	City VARCHAR(30),
+	State VARCHAR(30),
+	PinCode CHAR(10)
+);
 
-
+INSERT INTO Address(AddressLine1,AddressLine2,City,State,PinCode)
+VALUES('pink street','','Mumbai','Maharashtra','112233'),
+('Red street','','Panaji','Goa','223344'),
+('Purple street','','Jaipur','Rajasthan','334455'),
+('Orange street','','New Delhi','Delhi','445566'),
+('Grey street','','Karnataka','Bangalore','556677'),
+('Blue street','','Mumbai','Maharashtra','667788'),
+('White street','','Panaji','Goa','889900'),
+('Lavender street','','Jaipur','Rajasthan','990011'),
+('Oliver street','','New Delhi','Delhi','110098'),
+('Pikachu street','','Karnataka','Bangalore','22309');
 
 
 
@@ -208,18 +233,18 @@ VALUES(30,'2020-12-20',1),
 (30,'2021-05-20',5);
 
 --1)Query Staff using name or phone number or both
-SELECT * FROM Staff WHERE first_name='Ajay';
-SELECT * FROM Staff WHERE phone='9087654321';
+SELECT * FROM Staff WHERE FirstName='Ajay';
+SELECT * FROM Staff WHERE Phone='9087654321';
 
 --2)Query Staff using their Role
-SELECT s.first_name, s.last_name, r.roles FROM Staff s
+SELECT s.FirstName, s.LastName, r.RoleName FROM Staff s
 JOIN Role r
-ON s.roles_id= r.role_id
-ORDER BY r.roles;
+ON s.RoleId= r.RoleId
+ORDER BY r.RoleName;
 
 --3)Query Product based on -
 --a)Name
-SELECT * FROM Product WHERE product_name LIKE 'c%';
+SELECT * FROM Product WHERE product_name ILIKE 'c%';
 
 --b)Category
 SELECT pr.product_name, pr.product_selling_price, cat.category_name FROM Product pr
@@ -227,7 +252,7 @@ JOIN ProductCategory pcat
 ON pcat.product_id= pr.product_id
 JOIN Category cat
 ON cat.category_id= pcat.category_id
-WHERE cat.category_name LIKE 'D%'
+WHERE cat.category_name ILIKE 'D%'
 ORDER BY pr.product_selling_price;
 
 --c)InStock, OUTofstock
@@ -277,17 +302,17 @@ ORDER by number_of_products DESC;
 
 --7)List of Suppliers -
 --a) Name
-SELECT * FROM Supplier WHERE supplier_name LIKE'A%';
+SELECT * FROM Supplier WHERE supplier_name ILIKE'A%'
 
 --b) phone
-SELECT * FROM Supplier WHERE supplier_phone='1029384756';
+OR supplier_phone='1029384756'
 
 --c) email
 
-SELECT * FROM Supplier WHERE supplier_email LIKE 'j%';
+OR supplier_email ILIKE 'j%'
 
 --d) city/state
-SELECT * FROM Supplier WHERE supplier_city='Rajasthan';
+OR supplier_city='Rajasthan';
 
 --8)List of Product with different suppliers, with the recent date of supply 
 --and the amount supplied on the most recent occasion. Here this can also be filtered based on -
@@ -304,7 +329,7 @@ JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
 JOIN Orders o
 ON o.product_id= pr.product_id
-WHERE pr.product_name LIKE 'M%'
+WHERE pr.product_name ILIKE 'M%'
 ORDER BY o.order_date DESC ;
 
 --b)supplier name
@@ -322,7 +347,7 @@ JOIN Supplier s
 ON s.supplier_id= pr.supplier_id
 JOIN Orders o
 ON o.product_id= pr.product_id
-WHERE pr.product_short_code LIKE 'a%'
+WHERE pr.product_short_code ILIKE 'a%'
 ORDER BY o.order_date DESC;
 
 --d)supplied after a particular date
@@ -344,4 +369,3 @@ JOIN Orders o
 ON o.product_id= pr.product_id
 WHERE inv.quantity>40
 ORDER BY o.order_date DESC;
-
