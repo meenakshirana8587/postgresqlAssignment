@@ -1,0 +1,14 @@
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.deps.json
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.AssemblyInfoInputs.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.AssemblyInfo.cs
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Queries\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.csproj.CopyComplete

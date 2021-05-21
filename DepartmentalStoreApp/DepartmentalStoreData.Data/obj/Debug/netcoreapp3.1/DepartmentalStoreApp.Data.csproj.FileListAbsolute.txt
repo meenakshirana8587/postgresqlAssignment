@@ -1,0 +1,15 @@
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.deps.json
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.runtimeconfig.json
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.runtimeconfig.dev.json
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.AssemblyInfoInputs.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.AssemblyInfo.cs
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.csproj.CopyComplete
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreData.Data\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Data.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.deps.json
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.runtimeconfig.json
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.runtimeconfig.dev.json
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.csprojAssemblyReference.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.AssemblyInfoInputs.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.AssemblyInfo.cs
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp.Domain\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.Domain.genruntimeconfig.cache
