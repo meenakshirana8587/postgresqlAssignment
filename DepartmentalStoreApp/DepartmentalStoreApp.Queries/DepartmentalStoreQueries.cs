@@ -118,6 +118,58 @@ namespace DepartmentalStoreApp.Queries
         }
 
 
+        public void ListOfProductsWithDifferentSuppliers()
+        {
+
+            Console.WriteLine("List of products with suppliers");
+            Console.WriteLine("********************************");
+            var query = context.Product
+    .Join(context.Inventory, p => p.Id, pc => pc.ProductId, (p, pc) => new { p, pc })
+    .Join(context.Supplier, ppc => ppc.pc.SupplierId, c => c.Id, (ppc, c) => new { ppc, c })
+    .Select(m => new {
+        ProdId = m.ppc.p.ProductName,
+        CatId = m.c.FirstName
+        
+    });
+            Console.WriteLine("product\t\t\t\tsupplier");
+
+            foreach(var q in query)
+            {
+                Console.WriteLine(q.ProdId + "\t\t\t" + q.CatId);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("product with the recent date of supply");
+            Console.WriteLine("**************************************");
+            var productwithrecentdateofsupply = context.Inventory.OrderByDescending(x => x.DateOfSupply).First();
+            Console.WriteLine("product id: "+productwithrecentdateofsupply.ProductId+"\tDate of supply: "+ productwithrecentdateofsupply.DateOfSupply);
+
+            Console.WriteLine();
+            Console.WriteLine("Product has inventory more than or less than a given qty");
+            Console.WriteLine("********************************************************");
+
+            var productinventorybyquantity = context.Product
+                .Join(context.Inventory, p => p.Id, inv => inv.ProductId, (p, inv) => new { p, inv })
+                .Where(q=> q.inv.Quantity>20 && q.inv.Quantity<60)
+                .Select(quant => new
+                {
+                    product = quant.p.ProductName,
+                    quantity = quant.inv.Quantity
+                });
+
+            foreach(var res in productinventorybyquantity)
+            {
+                Console.WriteLine("product name : " + res.product + "\tproduct inventory quantity:" + res.quantity);
+            }
+
+
+
+        }
+        
 
     }
-}
+
+
+
+    }
+

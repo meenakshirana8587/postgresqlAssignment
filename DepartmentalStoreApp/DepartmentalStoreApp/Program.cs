@@ -24,6 +24,7 @@ namespace DepartmentalStoreApp
             dq.SelectFromProduct();
             dq.NumberofProductswithinacategory();
             dq.Listsupplier();
+            dq.ListOfProductsWithDifferentSuppliers();
         }
 
         
