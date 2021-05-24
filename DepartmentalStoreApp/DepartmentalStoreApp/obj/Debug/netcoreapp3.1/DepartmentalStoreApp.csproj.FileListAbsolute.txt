@@ -37,3 +37,9 @@ C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\obj\Debug
 C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\obj\Debug\netcoreapp3.1\DepartmentalStoreApp.genruntimeconfig.cache
 C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.dll
 C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\DepartmentalStoreApp.Queries.pdb
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\lenovo\source\repos\DepartmentalStoreApp\DepartmentalStoreApp\bin\Debug\netcoreapp3.1\System.Text.Json.dll

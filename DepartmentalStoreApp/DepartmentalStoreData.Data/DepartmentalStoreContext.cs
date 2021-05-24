@@ -1,5 +1,6 @@
 ﻿using DepartmentalStoreApp.Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,9 +20,19 @@ namespace DepartmentalStoreApp.Data
         public DbSet<Supplier> Supplier { get; set; }
         public DbSet<PurchaseOrder> PurchaseOrder { get; set; }
 
+        public static readonly ILoggerFactory ConsoleLoggerFactory =
+            LoggerFactory.Create(builder =>
+            {
+                builder
+                .AddFilter((category, level) =>
+                category == DbLoggerCategory.Database.Command.Name
+                && level == LogLevel.Information)
+                .AddConsole();
+            });
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.UseLoggerFactory(ConsoleLoggerFactory).EnableSensitiveDataLogging();    
             optionsBuilder.UseNpgsql("Server=localhost;Database=DStore;Username=postgres;Password=rana@1998");
         }
 

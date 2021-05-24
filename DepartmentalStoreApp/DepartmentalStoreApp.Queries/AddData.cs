@@ -88,12 +88,12 @@ namespace DepartmentalStoreApp.Queries
 
         public static void InsertIntoInventory()
         {
-            var inv1 = new Inventory { ProductId = 1, DateOfSupply = new DateTime(2020 - 12 - 23), SupplierId = 1, Quantity = 30 };
-            var inv2 = new Inventory { ProductId = 2, DateOfSupply = new DateTime(2020 - 11 - 23), SupplierId = 2, Quantity = 20 };
-            var inv3 = new Inventory { ProductId = 3, DateOfSupply = new DateTime(2019 - 10 - 23), SupplierId = 3, Quantity = 200 };
-            var inv4 = new Inventory { ProductId = 4, DateOfSupply = new DateTime(2021 - 02 - 23), SupplierId = 1, Quantity = 40 };
-            var inv5 = new Inventory { ProductId = 5, DateOfSupply = new DateTime(2021 - 03 - 23), SupplierId = 2, Quantity = 15 };
-            var inv6 = new Inventory { ProductId = 6, DateOfSupply = new DateTime(2019 - 12 - 23), SupplierId = 3, Quantity = 60 };
+            var inv1 = new Inventory { ProductId = 1, DateOfSupply = new DateTime(2020,12,23), SupplierId = 1, Quantity = 30 };
+            var inv2 = new Inventory { ProductId = 2, DateOfSupply = new DateTime(2020,11,23), SupplierId = 2, Quantity = 20 };
+            var inv3 = new Inventory { ProductId = 3, DateOfSupply = new DateTime(2019,10,23), SupplierId = 3, Quantity = 200 };
+            var inv4 = new Inventory { ProductId = 4, DateOfSupply = new DateTime(2021,02,23), SupplierId = 1, Quantity = 40 };
+            var inv5 = new Inventory { ProductId = 5, DateOfSupply = new DateTime(2021,03,23), SupplierId = 2, Quantity = 15 };
+            var inv6 = new Inventory { ProductId = 6, DateOfSupply = new DateTime(2019,12,23), SupplierId = 3, Quantity = 60 };
             context.AddRange(inv1, inv2, inv3, inv4, inv5, inv6);
             context.SaveChanges();
 
@@ -113,10 +113,11 @@ namespace DepartmentalStoreApp.Queries
 
         public static void InsertIntoPurchaseOrder()
         {
-            var po1 = new PurchaseOrder { ProductId = 1, OrderDate = new DateTime(2020 - 12 - 23), Quantity = 200, SupplierId = 1 };
-            var po2 = new PurchaseOrder { ProductId = 3, OrderDate = new DateTime(2021 - 2 - 23), Quantity = 20, SupplierId = 3 };
-            var po3 = new PurchaseOrder { ProductId = 6, OrderDate = new DateTime(2020 - 11 - 23), Quantity = 2, SupplierId = 2};
-            context.AddRange(po1, po2, po3);
+            var po1 = new PurchaseOrder { ProductId = 1, OrderDate = new DateTime(2020,12,23), Quantity = 200, SupplierId = 1 };
+            var po2 = new PurchaseOrder { ProductId = 3, OrderDate = new DateTime(2021,2,23), Quantity = 20, SupplierId = 3 };
+            var po3 = new PurchaseOrder { ProductId = 6, OrderDate = new DateTime(2020,11,23), Quantity = 2, SupplierId = 2};
+            var po4 = new PurchaseOrder { ProductId = 2, OrderDate = new DateTime(2021,02,20), Quantity = 4, SupplierId = 1 };
+            context.AddRange(po1, po2, po3,po4);
             context.SaveChanges();
 
         }

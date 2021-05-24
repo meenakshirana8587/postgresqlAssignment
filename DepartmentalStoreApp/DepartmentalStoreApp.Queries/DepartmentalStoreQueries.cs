@@ -164,10 +164,10 @@ namespace DepartmentalStoreApp.Queries
 
 
             //product with recent date of supply
-            Console.WriteLine("product with the recent date of supply");
+            Console.WriteLine("product and quantity with the recent date of supply");
             Console.WriteLine("**************************************");
             var productwithrecentdateofsupply = context.Inventory.OrderByDescending(x => x.DateOfSupply).First();
-            Console.WriteLine("product id: "+productwithrecentdateofsupply.ProductId+"\tDate of supply: "+ productwithrecentdateofsupply.DateOfSupply);
+            Console.WriteLine("product id: "+productwithrecentdateofsupply.ProductId+"\tDate of supply: "+ productwithrecentdateofsupply.DateOfSupply + "\tQuantity supplied: "+ productwithrecentdateofsupply.Quantity );
             Console.WriteLine();
 
 
@@ -192,12 +192,46 @@ namespace DepartmentalStoreApp.Queries
 
 
 
+
+
+            // filter list of products with supplier on the basis of productname
+            Console.WriteLine("filter product and supplier with the recent date of supply on the basis of products ");
+            Console.WriteLine("**************************************");
+            var filterproductwithrecentdateofsupply = (from inv in context.Inventory
+                                                      join p in context.Product on inv.ProductId equals p.Id
+                                                      join po in context.PurchaseOrder on p.Id equals po.ProductId
+                                                      where p.ProductName == "Eraser"
+                                                      select new {inv, p, po }).ToList();
+            foreach(var filter in filterproductwithrecentdateofsupply)
+            Console.WriteLine("product id: " + filter.inv.ProductId + "\tproduct name: "+ filter.p.ProductName + "\tDate of supply: " + filter.inv.DateOfSupply + "\tQuantity supplied: " + filter.po.Quantity);
+            Console.WriteLine();
+
+
+
+            //supplied after a particular date
+            Console.WriteLine("fiter: supplied after a particular date");
+            Console.WriteLine("***************************************");
+            var suppliedafter= (from p in context.Product
+                                join inv in context.Inventory on p.Id equals inv.ProductId
+                                join s in context.Supplier on inv.SupplierId equals s.Id
+                                where s.FirstName == "Raj"
+                                select new { inv, p, s }).ToList();
+            foreach (var filter in suppliedafter)
+                Console.WriteLine("product id: " + filter.inv.ProductId + "\tproduct name: " + filter.p.ProductName + "\tDate of supply: " + filter.inv.DateOfSupply + "\tSupplier Name: " + filter.s.FirstName);
+            Console.WriteLine();
+
+
         }
-        
+
+
+
+
+       
+
 
     }
 
 
 
-    }
+}
 

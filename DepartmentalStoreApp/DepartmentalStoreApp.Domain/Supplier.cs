@@ -15,6 +15,6 @@ namespace DepartmentalStoreApp.Domain
 
         public Inventory Inventory { get; set; }
 
-        public PurchaseOrder PurchaseOrder { get; set; }
+        //public PurchaseOrder PurchaseOrder { get; set; }
     }
 }
